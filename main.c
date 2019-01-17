@@ -1,11 +1,13 @@
 #include <stdio.h>
 char arr[1024];
-int index=0;
-int main(){
+int index = 0;
+int main()
+{
 
     printf("进入敏感字符管理系统\n");
-    
-    while(1){
+
+    while (1)
+    {
         printf("1---添加敏感字符\n");
         printf("2---删除敏感字符\n");
         printf("3---显示敏感字符\n");
@@ -15,51 +17,62 @@ int main(){
         printf("请输入相应的功能编号\n");
 
         char code;
-        scanf("%d",&code);
+        scanf("%d", &code);
 
-        
-        if (code==1) {
-                printf("请输入要添加的敏感字符\n");
-                char m;
-                scanf("%c",&m);
-                scanf("%c",&m);
-                arr[index]=m;
-                index++;
-                printf("添加成功，点击回车继续\n");
-                char x;
-                scanf("%c",&x);
-                scanf("%c",&x);
+        if (code == 1)
+        {
+            printf("请输入要添加的敏感字符\n");
+            char m;
+            scanf("%c", &m);
+            scanf("%c", &m);
+            arr[index] = m;
+            index++;
+            printf("添加成功，点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
-        if (code==2) {
-            
-            if (index==0) {
+        if (code == 2)
+        {
+
+            if (index == 0)
+            {
                 printf("删除失败，点击回车继续\n");
                 char x;
-                scanf("%c",&x);
-                scanf("%c",&x);
+                scanf("%c", &x);
+                scanf("%c", &x);
             }
-            else{
+            else
+            {
                 index--;
                 printf("删除成功，点击回车继续\n");
                 char x;
-                scanf("%c",&x);
-                scanf("%c",&x);
+                scanf("%c", &x);
+                scanf("%c", &x);
             }
         }
-        if (code==3) {
-            
+        if (code == 3)
+        {
+            printf("您的敏感字符为:\n");
+
+            for (int i = 0; i < index; i++)
+            {
+                printf("你的第%d个敏感字符为%c\n", i + 1, arr[i]);
+            }
+            printf("点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
-        if (code==4) {
-            
+        if (code == 4)
+        {
         }
-        if (code==5) {
+        if (code == 5)
+        {
             printf("程序结束\n");
             break;
         }
-        
     }
-    
 
     return 0;
-
 }
