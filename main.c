@@ -69,7 +69,7 @@ int main()
             printf("请输入一段英文\n");
             char str[1024];
             scanf("%s", str);
-            for (int i = 0; str[index] != '\0'; i++)
+            for (int i = 0; str[i] != '\0'; i++)
             {
                 char a = str[i];
                 int flag = 0;
