@@ -32,6 +32,19 @@ int main(){
         }
         if (code==2) {
             
+            if (index==0) {
+                printf("删除失败，点击回车继续\n");
+                char x;
+                scanf("%c",&x);
+                scanf("%c",&x);
+            }
+            else{
+                index--;
+                printf("删除成功，点击回车继续\n");
+                char x;
+                scanf("%c",&x);
+                scanf("%c",&x);
+            }
         }
         if (code==3) {
             
